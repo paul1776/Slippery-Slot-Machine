@@ -3,7 +3,7 @@ import org.junit.jupiter.api.*;
 public class TestSlipperySlot {
 
     @Test
-    public void thisTest() {
+    public void allSame() {
         // First test
         System.out.println("this");
     }
