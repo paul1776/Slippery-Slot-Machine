@@ -95,6 +95,7 @@ public class BetterSlot {
                 powerOfTwo = true;
                 payout += 3;
             }
+            pt++;
         }
 
         return payout;
