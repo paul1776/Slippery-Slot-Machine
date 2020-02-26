@@ -9,7 +9,8 @@ public class BetterSlot {
         int[] values = new int[5];
 
         for (int i = 0; i < values.length; i++) {
-            values[i] = new Random().nextInt(51);
+            values[i] = new Random().nextInt(50);
+            values[i] += 1;
         }
         return values;
     }
@@ -139,7 +140,7 @@ public class BetterSlot {
         BetterSlot better = new BetterSlot();
 
         System.out.println("Pulling the lever now");
-        int[] test = new int[]{1, 2, 2, 2, 4};
+        int[] test = better.pullTheLever();
 
         System.out.println("Feeding values through payoff");
         better.payOff(test);
