@@ -99,4 +99,8 @@ public class BetterSlot {
 
         return payout;
     }
+
+    public void main() {
+
+    }
 }
