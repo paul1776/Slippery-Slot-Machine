@@ -43,35 +43,41 @@ public class BetterSlot {
         System.out.println("Number of pairs");
         System.out.println(pairs);
 
-        // Rule 3 and 4
-        if (pairs > 0) {
-            System.out.println("Pairs greater than 0");
-            payout = 10;
-            for (int i = 0; i < (values.length-2); i++) {
-                if ((values[i] == values[i+1]) && (values[i+1] == values[i+2])) {
-                    System.out.println("We found a triple");
-                    triples = true;
+        switch (pairs) {
+            case 1:
+                payout = 10;
+                break;
+            case 2:
+                boolean tripleFound = false;
+                int i = 0;
+                while ((!tripleFound) & (i < values.length-2)) {
+                    if ((values[i] == values[i+1]) && (values[i+1] == values[i+2])) {
+                        tripleFound = true;
+                        payout = 100;
+                    }
+                    i++;
                 }
-            }
-        }
+                if (!tripleFound) {
+                    payout = 10;
+                }
+                break;
+            case 3:
+                boolean fourFound = false;
+                int a = 0;
+                while ((!fourFound) && (a < values.length-3)) {
+                    if (values[a] == values[a+1] && (values[a+1] == values[a+2] && values[a+2] == values[a+3])) {
+                        fourFound = true;
+                        payout = 10000;
+                    }
+                }
+                if (!fourFound) {
+                    payout = 5000;
+                }
 
-        // Rule 2
-        if (triples == true) {
-            payout = 100;
-            if (pairs > 2) {
-                payout = 5000;
-            }
-            if ((values[0] == values[1]) || (values[3] == values[4])) {
-                fours = true;
-            }
-        }
-
-        // Rule 1
-        if (fours == true) {
-            payout = 10000;
-            if ((values[0] == values[1]) && (values[3] == values[4])) {
+                break;
+            case 4:
                 payout = 1000000;
-            }
+                break;
         }
 
         // Rules 6, 7 and 8
@@ -117,6 +123,7 @@ public class BetterSlot {
 
         return payout;
     }
+
 
     public static void main(String[] args) {
 
