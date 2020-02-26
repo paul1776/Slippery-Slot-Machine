@@ -117,7 +117,7 @@ public class BetterSlot {
         int pt = 0;
 
         while ((!powerOfTwo) && (pt < values.length)) {
-            if (values[pt] % 2 == 0) {
+            if ((values[i] & values[i] - 1)==0) {
                 powerOfTwo = true;
             }
             pt++;
