@@ -21,20 +21,35 @@ public class BetterSlot {
         boolean fours = false;
 
         Arrays.sort(values);
+        System.out.println("The length of values is: ");
+        System.out.println(values.length);
+
 
         // Rules 1 to 5
         // Rule 5
-        for (int i = 1; i < values.length; i++) {
-            if (values[i] == values[i - 1]) {
+        for (int i = 0; i < (values.length-1); i++) {
+            if (values[i] == values[i + 1]) {
                 pairs++;
             }
         }
 
+        for (int i = 0; i < values.length; i++) {
+            System.out.print(values[i]);
+            System.out.print(" ");
+        }
+
+        System.out.print("\n");
+
+        System.out.println("Number of pairs");
+        System.out.println(pairs);
+
         // Rule 3 and 4
         if (pairs > 0) {
+            System.out.println("Pairs greater than 0");
             payout = 10;
-            for (int i = 1; i < (values.length-1); i++) {
-                if ((values[i - 1] == values[i]) && (values[i] == values[i + 1])) {
+            for (int i = 0; i < (values.length-2); i++) {
+                if ((values[i] == values[i+1]) && (values[i+1] == values[i+2])) {
+                    System.out.println("We found a triple");
                     triples = true;
                 }
             }
@@ -43,7 +58,7 @@ public class BetterSlot {
         // Rule 2
         if (triples == true) {
             payout = 100;
-            if (pairs == 2) {
+            if (pairs > 2) {
                 payout = 5000;
             }
             if ((values[0] == values[1]) || (values[3] == values[4])) {
@@ -98,10 +113,19 @@ public class BetterSlot {
             pt++;
         }
 
+        System.out.println(payout);
+
         return payout;
     }
 
-    public void main() {
+    public static void main(String[] args) {
 
+        BetterSlot better = new BetterSlot();
+
+        System.out.println("Pulling the lever now");
+        int[] test = new int[]{1, 2, 2, 2, 4};
+
+        System.out.println("Feeding values through payoff");
+        better.payOff(test);
     }
 }
