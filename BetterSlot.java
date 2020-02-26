@@ -86,7 +86,7 @@ public class BetterSlot {
 
         int ps = 0;
 
-        while ((!foundPerfectSquare) && (ps != 5)) {
+        while ((!foundPerfectSquare) && (ps < values.length)) {
             double squareRoot = Math.sqrt(values[ps]);
             if ((squareRoot - Math.floor(squareRoot)) == 0) {
                 foundPerfectSquare = true;
@@ -102,7 +102,7 @@ public class BetterSlot {
         boolean foundFortyTwo = false;
         int ft = 0;
 
-        while ((!foundFortyTwo) && (ft != 5)) {
+        while ((!foundFortyTwo) && (ft < values.length)) {
             if (values[ft] == 42) {
                 foundFortyTwo = true;
             }
@@ -116,7 +116,7 @@ public class BetterSlot {
         boolean powerOfTwo = false;
         int pt = 0;
 
-        while ((!powerOfTwo) && (pt != 5)) {
+        while ((!powerOfTwo) && (pt < values.length)) {
             if (values[pt] % 2 == 0) {
                 powerOfTwo = true;
             }
@@ -127,7 +127,9 @@ public class BetterSlot {
             payout += 3;
         }
 
-        System.out.println(payout);
+        System.out.print("The payout is ");
+        System.out.print(payout);
+        System.out.print("\n");
 
         return payout;
     }
