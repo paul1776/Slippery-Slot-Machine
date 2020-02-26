@@ -22,27 +22,12 @@ public class BetterSlot {
         boolean fours = false;
 
         Arrays.sort(values);
-        System.out.println("The length of values is: ");
-        System.out.println(values.length);
 
-
-        // Rules 1 to 5
-        // Rule 5
         for (int i = 0; i < (values.length-1); i++) {
             if (values[i] == values[i + 1]) {
                 pairs++;
             }
         }
-
-        for (int i = 0; i < values.length; i++) {
-            System.out.print(values[i]);
-            System.out.print(" ");
-        }
-
-        System.out.print("\n");
-
-        System.out.println("Number of pairs");
-        System.out.println(pairs);
 
         switch (pairs) {
             case 1:
@@ -81,7 +66,6 @@ public class BetterSlot {
                 break;
         }
 
-        // Rules 6, 7 and 8
         // Rule 6
         boolean foundPerfectSquare = false;
 
@@ -128,21 +112,6 @@ public class BetterSlot {
             payout += 3;
         }
 
-        System.out.print("The payout is ");
-        System.out.print(payout);
-        System.out.print("\n");
-
         return payout;
-    }
-
-
-    public static void main(String[] args) {
-        BetterSlot better = new BetterSlot();
-
-        System.out.println("Pulling the lever now");
-        int[] test = better.pullTheLever();
-
-        System.out.println("Feeding values through payoff");
-        better.payOff(test);
     }
 }
