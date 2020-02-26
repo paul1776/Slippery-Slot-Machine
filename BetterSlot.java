@@ -90,9 +90,12 @@ public class BetterSlot {
             double squareRoot = Math.sqrt(values[ps]);
             if ((squareRoot - Math.floor(squareRoot)) == 0) {
                 foundPerfectSquare = true;
-                payout += 7;
             }
             ps++;
+        }
+
+        if (foundPerfectSquare) {
+            payout += 7;
         }
 
         // Rule 7
@@ -102,9 +105,11 @@ public class BetterSlot {
         while ((!foundFortyTwo) && (ft != 5)) {
             if (values[ft] == 42) {
                 foundFortyTwo = true;
-                payout += 2;
             }
             ft++;
+        }
+        if (foundFortyTwo) {
+            payout += 2;
         }
 
         // Rule 8
@@ -114,9 +119,12 @@ public class BetterSlot {
         while ((!powerOfTwo) && (pt != 5)) {
             if (values[pt] % 2 == 0) {
                 powerOfTwo = true;
-                payout += 3;
             }
             pt++;
+        }
+
+        if (powerOfTwo) {
+            payout += 3;
         }
 
         System.out.println(payout);
@@ -126,7 +134,6 @@ public class BetterSlot {
 
 
     public static void main(String[] args) {
-
         BetterSlot better = new BetterSlot();
 
         System.out.println("Pulling the lever now");
