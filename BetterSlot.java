@@ -69,11 +69,11 @@ public class BetterSlot {
                         fourFound = true;
                         payout = 10000;
                     }
+                    a++;
                 }
                 if (!fourFound) {
                     payout = 5000;
                 }
-
                 break;
             case 4:
                 payout = 1000000;
