@@ -31,7 +31,7 @@ public class BetterSlot {
         }
 
         // Rule 3 and 4
-        if (pairs != 0) {
+        if (pairs > 0) {
             payout = 10;
             for (int i = 1; i < (values.length-1); i++) {
                 if ((values[i - 1] == values[i]) && (values[i] == values[i + 1])) {
