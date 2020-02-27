@@ -4,8 +4,6 @@ import org.junit.jupiter.api.*;
 import java.util.Random;
 import java.util.Arrays;
 
-
-@RunWith(SlipperySlot.class)
 public class TestSlipperySlot {
 
     @Test
