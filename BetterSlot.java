@@ -98,17 +98,17 @@ public class BetterSlot {
         }
 
         // Rule 8
-        boolean powerOfTwo = false;
+        boolean foundPowerTwo = false;
         int pt = 0;
 
-        while ((!powerOfTwo) && (pt < values.length)) {
+        while ((!foundPowerTwo) && (pt < values.length)) {
             if ((values[pt] & values[pt] - 1)==0) {
-                powerOfTwo = true;
+                foundPowerTwo = true;
             }
             pt++;
         }
 
-        if (powerOfTwo) {
+        if (foundPowerTwo) {
             payout += 3;
         }
 

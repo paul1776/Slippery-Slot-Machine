@@ -101,14 +101,14 @@ public class TestSlipperySlot {
 
     @Test
     public void testFourOne() {
-        int[] fourOne = new int[]{23, 7, 23, 23, 23};
+        int[] fourOne = new int[]{3, 3, 37, 3, 3};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(fourOne) == 10000);
     }
 
     @Test
     public void testFourTwo() {
-        int[] fourTwo = new int[]{3, 3, 37, 3, 3};
+        int[] fourTwo = new int[]{23, 7, 23, 23, 23};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(fourTwo) == 10000);
     }
@@ -128,17 +128,10 @@ public class TestSlipperySlot {
     }
 
     @Test
-    public void testOnlyOnePairAndFortyTwoOne() {
-        int[] pairAndFortyTwoOne = new int[]{3, 5, 7, 42, 42};
+    public void testFortyTwoAndPair() {
+        int[] fortyTwoAndPair = new int[]{3, 5, 7, 42, 42};
         SlipperySlot test = new SlipperySlot();
-        assertTrue(test.payOff(pairAndFortyTwoOne) == 12);
-    }
-
-    @Test
-    public void testOnlyOnePairAndFortyTwoTwo() {
-        int[] pairAndFortyTwoTwo = new int[]{46, 41, 7, 7, 42};
-        SlipperySlot test = new SlipperySlot();
-        assertTrue(test.payOff(pairAndFortyTwoTwo) == 12);
+        assertTrue(test.payOff(fortyTwoAndPair) == 12);
     }
 
     @Test
@@ -157,7 +150,7 @@ public class TestSlipperySlot {
 
     @Test
     public void testPerfectSquareTwo() {
-        int[] perfectTwo = new int[]{3, 9, 27, 36, 49};
+        int[] perfectTwo = new int[]{3, 9, 27, 36, 37};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(perfectTwo) == 7);
     }
@@ -170,42 +163,42 @@ public class TestSlipperySlot {
     }
 
     @Test
-    public void testAllSamePerfectSquare() {
-        int[] allSamePerfect = new int[]{49, 49, 49, 49, 49};
+    public void testAllPerfectSquare() {
+        int[] allPerfect = new int[]{49, 49, 49, 49, 49};
         SlipperySlot test = new SlipperySlot();
-        assertTrue(test.payOff(allSamePerfect) == 1000007);
+        assertTrue(test.payOff(allPerfect) == 1000007);
     }
 
     @Test
-    public void testPowerOfTwoOne() {
+    public void testPowerTwoOne() {
         int[] powerOne = new int[]{3, 8, 11, 32, 33};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(powerOne) == 3);
     }
 
     @Test
-    public void testPowerOfTwoTwo() {
+    public void testPowerTwoTwo() {
         int[] powerTwo = new int[]{30, 31, 32, 33, 34};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(powerTwo) == 3);
     }
 
     @Test
-    public void testAllSamePowerOfTwo() {
-        int[] allPower = new int[]{8, 8, 8, 8, 8};
+    public void testAllPowerTwo() {
+        int[] allPowerTwo = new int[]{8, 8, 8, 8, 8};
         SlipperySlot test = new SlipperySlot();
-        assertTrue(test.payOff(allPower) == 1000003);
+        assertTrue(test.payOff(allPowerTwo) == 1000003);
     }
 
     @Test
-    public void testAllSamePerfectSquareAndPowerOfTwo() {
+    public void testAllPerfectSquareAndPowerTwo() {
         int[] allSamePerfect = new int[]{4, 4, 4, 4, 4};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(allSamePerfect) == 1000010);
     }
 
     @Test
-    public void testFortyTwoAndPerfectSquareAndPowerOfTwo() {
+    public void testFortyTwoAndPerfectSquareAndPowerTwo() {
         int[] fortyTwoOne = new int[]{1, 4, 16, 42, 49};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(fortyTwoOne) == 12);
