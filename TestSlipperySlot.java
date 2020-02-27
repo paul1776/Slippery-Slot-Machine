@@ -1,6 +1,10 @@
+import static org.junit.Assert.*;
+import org.junit.Test;
 import org.junit.jupiter.api.*;
-import org.junit.runner.RunWith;
-import org.junit.platform.runner.JUnitPlatform;
+import org.junit.Runner.RunWith;
+import java.util.Random;
+import java.util.Arrays;
+
 
 @RunWith(Suite.class)
 @SuiteClasses({ SlipperySlot.class })
@@ -9,7 +13,7 @@ public class TestSlipperySlot {
     @Test
     public void testLeverPull() {
         SlipperySlot test = new SlipperySlot();
-        int[] testLever = new int[];
+        int[] testLever = new int[5];
 
         // Produce 20 sets of random integers; verify all are between 1 and 50.
         for (int i = 0; i < 21; i++) {
@@ -38,8 +42,8 @@ public class TestSlipperySlot {
 
             // Create an array of 5 of them
             int[] testValues = new int[5];
-            for (int i = 0; i < 5; i++) {
-                testValues[i] = value;
+            for (int a = 0; a < 5; a++) {
+                testValues[a] = value;
             }
 
             // Test with payOff class
