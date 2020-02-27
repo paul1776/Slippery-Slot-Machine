@@ -44,6 +44,48 @@ public class TestSlipperySlot {
     }
 
     @Test
+    public void testSimplePairOne() {
+        int[] simplePairOne = new int[]{5, 5, 7, 11, 43};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(simplePairOne) == 10);
+    }
+
+    @Test
+    public void testSimplePairTwo() {
+        int[] simplePairTwo = new int[]{3, 3, 39, 37, 14};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(simplePairTWo) == 10);
+    }
+
+    @Test
+    public void testTwoPairsOne() {
+        int[] twoPairsOne = new int[]{3, 3, 39, 39, 14};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(twoPairsOne) == 10);
+    }
+
+    @Test
+    public void testTwoPairsTwo() {
+        int[] twoPairsTwo = new int[]{5, 5, 14, 14, 23};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(twoPairsTwo) == 10);
+    }
+
+    @Test
+    public void testTripleOne() {
+        int[] tripleOne = new int[]{39, 39, 14, 39, 41};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(tripleOne) == 100);
+    }
+
+    @Test
+    public void testTripleTwo() {
+        int[] tripleTwo = new int[]{3, 3, 3, 37, 14};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(tripleTwo) == 100);
+    }
+
+    @Test
     public void testFortyTwoOne() {
         int[] fortyTwoOne = new int[]{3, 5, 6, 7, 42};
         SlipperySlot test = new SlipperySlot();
