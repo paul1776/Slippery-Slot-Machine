@@ -140,4 +140,14 @@ public class TestSlipperySlot {
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(fortyTwoOne) == 12);
     }
+
+    @Test (timeout = 1000)
+    public void testTimeout() {
+        // Running payoff 10X to test timeout
+        for (int i = 0; i < 11; i++) {
+            int[] random = new int[]{1, 4, 16, 42, 49};
+            SlipperySlot test = new SlipperySlot();
+            test.payOff(random);
+        }
+    }
 }
