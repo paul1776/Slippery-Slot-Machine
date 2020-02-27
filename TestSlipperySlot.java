@@ -73,7 +73,7 @@ public class TestSlipperySlot {
 
     @Test
     public void testPerfectSquareTwo() {
-        int[] perfectTwo = new int[]{1,9,25,36,49};
+        int[] perfectTwo = new int[]{3,9,27,36,49};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(perfectTwo) == 7);
     }
