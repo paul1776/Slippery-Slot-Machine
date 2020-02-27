@@ -141,7 +141,7 @@ public class TestSlipperySlot {
         assertTrue(test.payOff(fortyTwoOne) == 12);
     }
 
-    @Test (timeout = 1)
+    @Test (timeout = 5)
     public void testTimeout() {
         // Running payoff 10000X to test timeout
         for (int i = 0; i < 10001; i++) {
