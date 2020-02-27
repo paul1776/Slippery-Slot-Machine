@@ -54,7 +54,7 @@ public class TestSlipperySlot {
     public void testSimplePairTwo() {
         int[] simplePairTwo = new int[]{3, 3, 39, 37, 14};
         SlipperySlot test = new SlipperySlot();
-        assertTrue(test.payOff(simplePairTWo) == 10);
+        assertTrue(test.payOff(simplePairTwo) == 10);
     }
 
     @Test
@@ -183,7 +183,7 @@ public class TestSlipperySlot {
         assertTrue(test.payOff(fortyTwoOne) == 12);
     }
 
-    @Test (timeout = 45)
+    @Test (timeout = 43)
     public void testTimeout() {
         // Running payoff 10000X to test timeout
         for (int i = 0; i < 10001; i++) {
