@@ -45,49 +45,56 @@ public class TestSlipperySlot {
 
     @Test
     public void testFortyTwoOne() {
-        int[] fortyTwoOne = new int[]{3,5,6,7,42};
+        int[] fortyTwoOne = new int[]{3, 5, 6, 7, 42};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(fortyTwoOne) == 2);
     }
 
     @Test
     public void testFortyTwoTwo() {
-        int[] fortyTwoOne = new int[]{40,41,42,43,44};
+        int[] fortyTwoOne = new int[]{40, 41, 42, 43, 44};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(fortyTwoOne) == 2);
     }
 
     @Test
-    public void testAllFortyTWo() {
-        int[] allFortyTwo = new int[]{42,42,42,42,42};
+    public void testAllFortyTwo() {
+        int[] allFortyTwo = new int[]{42, 42, 42, 42, 42};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(allFortyTwo) == 1000002);
     }
 
     @Test
     public void testPerfectSquareOne() {
-        int[] perfectOne = new int[]{40,41,43,44,49};
+        int[] perfectOne = new int[]{40, 41, 43, 44, 49};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(perfectOne) == 7);
     }
 
     @Test
     public void testPerfectSquareTwo() {
-        int[] perfectTwo = new int[]{3,9,27,36,49};
+        int[] perfectTwo = new int[]{3, 9, 27, 36, 49};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(perfectTwo) == 7);
     }
 
     @Test
     public void testAllSamePerfectSquare() {
-        int[] allSamePerfect = new int[]{49,49,49,49,49};
+        int[] allSamePerfect = new int[]{49, 49, 49, 49, 49};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(allSamePerfect) == 1000007);
     }
 
     @Test
+    public void testAllSamePerfectSquareAndPowerOfTwo() {
+        int[] allSamePerfect = new int[]{4, 4, 4, 4, 4};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(allSamePerfect) == 1000010);
+    }
+
+    @Test
     public void testFortyTwoAndPerfectSquareAndPowerOfTwo() {
-        int[] fortyTwoOne = new int[]{1,4,16,42,49};
+        int[] fortyTwoOne = new int[]{1, 4, 16, 42, 49};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(fortyTwoOne) == 12);
     }
