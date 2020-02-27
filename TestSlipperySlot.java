@@ -99,21 +99,23 @@ public class TestSlipperySlot {
     }
 
     @Test
-    void testFortyTwoAndPerfectSquareAndPowerOfTwo() {
+    public void testFortyTwoAndPerfectSquareAndPowerOfTwo() {
         int[] fortyTwoOne = new int[]{1,4,16,42,49};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(fortyTwoOne) == 12);
     }
 
     @Test
-    void testOnlyOnePairAndFortyTwo() {
+    public void testOnlyOnePairAndFortyTwoOne() {
         int[] pairAndFortyTwo = new int[]{3, 5, 7, 42, 42}
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(fortyTwoOne) == 12);
     }
 
-
-    void main() {
-        System.out.println("Welcome to my Test file");
+    @Test
+    public void testOnlyOnePairAndFortyTwoTwo() {
+        int[] pairAndFortyTwo = new int[]{46, 41, 7, 7, 42}
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(fortyTwoOne) == 12);
     }
 }
