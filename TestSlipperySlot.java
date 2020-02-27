@@ -24,12 +24,7 @@ public class TestSlipperySlot {
     }
 
     @Test
-    public void testFortyTwo() {
-
-    }
-
-    @Test
-    public void allSame() {
+    public void testAllSame() {
         // Produce 20 sets of random identical integers between 1 and 50. Test with payout class.
         for (int i = 0; i < 21; i++) {
             // Generate a random number between 1 and 50.
@@ -46,6 +41,47 @@ public class TestSlipperySlot {
             SlipperySlot test = new SlipperySlot();
             assertTrue(test.payOff(testValues) >= 1000000);
         }
+    }
+
+    @Test
+    public void testAllDifferent() {
+        // Produce 20 sets of random non-identical integers between 1 and 50. Test with payout class.
+        for (int i = 0; i < 21; i++) {
+
+            // Generate a random number between 1 and 50.
+            int value = new Random().nextInt(50);
+            value += 1;
+
+            // Create an array of 5 of non-identical random numbers
+            int[] testValues = new int[5];
+
+            // check if value within 4 of 50
+            if (value < 46) {
+                for (int a = 0; a < 5; a++) {
+                    testValues[a] = value + a;
+                    if (testValues[a] == 42) {
+                        testValues[a] - Random.nextInt(5);
+                    }
+                }
+            }
+            else {
+                for (int a = 0; a < 5; a++) {
+                    testValues[a] = value - a;
+                    if (testValues[a] == 42) {
+                        testValues[a] - new Random().nextInt(5);
+                    }
+                }
+            }
+
+            // Test with payOff class
+            SlipperySlot test = new SlipperySlot();
+            assertTrue(10 > test.payOff(testValues));
+        }
+    }
+
+    @Test
+    public void testFortyTwo() {
+
     }
 
     @Test
