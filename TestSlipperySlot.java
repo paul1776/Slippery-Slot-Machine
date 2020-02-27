@@ -43,6 +43,8 @@ public class TestSlipperySlot {
         }
     }
 
+    /**
+
     @Test
     public void testAllDifferent() {
         // Produce 20 sets of random non-identical integers between 1 and 50. Test with payout class.
@@ -80,17 +82,29 @@ public class TestSlipperySlot {
             assertTrue(10 > test.payOff(testValues));
         }
     }
+     **/
 
     @Test
-    public void testFortyTwo() {
-
+    public void testFortyTwoOne() {
+        int[] fortyTwoOne = new int[]{3,5,6,7,42};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(fortyTwoOne) == 2);
     }
 
     @Test
-    public void thatTest() {
-        // Second test
-        System.out.println("that");
+    public void testFortyTwoTwo() {
+        int[] fortyTwoOne = new int[]{40,41,42,43,44};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(fortyTwoOne) == 2);
     }
+
+    void testFortyTwoAndPerfectSquareAndPowerOfTwo() {
+        int[] fortyTwoOne = new int[]{1,4,16,42,49};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(fortyTwoOne) == 12);
+    }
+
+
 
     void main() {
         System.out.println("Welcome to my Test file");
