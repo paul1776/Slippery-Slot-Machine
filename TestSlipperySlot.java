@@ -147,7 +147,7 @@ public class TestSlipperySlot {
         for (int i = 0; i < 21; i++) {
             int[] random = new int[]{1, 4, 16, 42, 49};
             SlipperySlot test = new SlipperySlot();
-            test.pullLever();
+            test.pullTheLever();
             test.payOff(random);
         }
     }
