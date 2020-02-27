@@ -1,13 +1,11 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 import org.junit.jupiter.api.*;
-import org.junit.Runner.RunWith;
 import java.util.Random;
 import java.util.Arrays;
 
 
-@RunWith(Suite.class)
-@SuiteClasses({ SlipperySlot.class })
+@RunWith(SlipperySlot.class)
 public class TestSlipperySlot {
 
     @Test
@@ -18,7 +16,7 @@ public class TestSlipperySlot {
         // Produce 20 sets of random integers; verify all are between 1 and 50.
         for (int i = 0; i < 21; i++) {
             testLever = test.pullTheLever();
-            assertEquals(testLever.length, 5, "The lever pull must produce 5 integers");
+            assertEquals("The lever pull must produce 5 integers", testLever.length, 5);
             assertTrue(0 < testLever[0] && testLever[0] < 51);
             assertTrue(0 < testLever[1] && testLever[1] < 51);
             assertTrue(0 < testLever[2] && testLever[2] < 51);
