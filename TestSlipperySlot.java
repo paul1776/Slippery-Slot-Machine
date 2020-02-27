@@ -86,6 +86,20 @@ public class TestSlipperySlot {
     }
 
     @Test
+    public void testFullHouseOne() {
+        int[] fullHouseOne = new int[]{3, 3, 37, 37, 3};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(fullHouseOne) == 5000);
+    }
+
+    @Test
+    public void testFullHouseTwo() {
+        int[] fullHouseTwo = new int[]{23, 7, 23, 23, 7};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(fullHouseTwo) == 5000);
+    }
+
+    @Test
     public void testFortyTwoOne() {
         int[] fortyTwoOne = new int[]{3, 5, 6, 7, 42};
         SlipperySlot test = new SlipperySlot();
