@@ -79,6 +79,13 @@ public class TestSlipperySlot {
     }
 
     @Test
+    public void testPerfectSquareAndPair() {
+        int[] perfectAndPair = new int[]{9,9,11,13,14};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(perfectTwo) == 17);
+    }
+
+    @Test
     public void testAllSamePerfectSquare() {
         int[] allSamePerfect = new int[]{49, 49, 49, 49, 49};
         SlipperySlot test = new SlipperySlot();
