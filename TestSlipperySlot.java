@@ -87,7 +87,7 @@ public class TestSlipperySlot {
 
     @Test
     public void testPowerOfTwoOne() {
-        int[] powerOne = new int[]{2, 8, 16, 32, 33};
+        int[] powerOne = new int[]{3, 8, 16, 32, 33};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(powerOne) == 3);
     }
