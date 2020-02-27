@@ -143,8 +143,8 @@ public class TestSlipperySlot {
 
     @Test (timeout = 1)
     public void testTimeout() {
-        // Running payoff 100X to test timeout
-        for (int i = 0; i < 101; i++) {
+        // Running payoff 10000X to test timeout
+        for (int i = 0; i < 10001; i++) {
             int[] random = new int[]{1, 4, 16, 42, 49};
             SlipperySlot test = new SlipperySlot();
             test.pullTheLever();
