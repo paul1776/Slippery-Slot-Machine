@@ -100,6 +100,20 @@ public class TestSlipperySlot {
     }
 
     @Test
+    public void testFourOne() {
+        int[] fourOne = new int[]{23, 7, 23, 23, 23};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(fourOne) == 10000);
+    }
+
+    @Test
+    public void testFourTwo() {
+        int[] fourTwo = new int[]{3, 3, 37, 3, 3};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(fourTwo) == 10000);
+    }
+
+    @Test
     public void testFortyTwoOne() {
         int[] fortyTwoOne = new int[]{3, 5, 6, 7, 42};
         SlipperySlot test = new SlipperySlot();
@@ -197,7 +211,7 @@ public class TestSlipperySlot {
         assertTrue(test.payOff(fortyTwoOne) == 12);
     }
 
-    @Test (timeout = 43)
+    @Test (timeout = 42)
     public void testTimeout() {
         // Running payoff 10000X to test timeout
         for (int i = 0; i < 10001; i++) {
