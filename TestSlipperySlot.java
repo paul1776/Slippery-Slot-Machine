@@ -79,17 +79,38 @@ public class TestSlipperySlot {
     }
 
     @Test
-    public void testPerfectSquareAndPair() {
-        int[] perfectAndPair = new int[]{9,9,11,13,14};
-        SlipperySlot test = new SlipperySlot();
-        assertTrue(test.payOff(perfectAndPair) == 17);
-    }
-
-    @Test
     public void testAllSamePerfectSquare() {
         int[] allSamePerfect = new int[]{49, 49, 49, 49, 49};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(allSamePerfect) == 1000007);
+    }
+
+    @Test
+    public void testPowerOfTwoOne() {
+        int[] powerOne = new int[]{2, 8, 16, 32, 33};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(powerOne) == 3);
+    }
+
+    @Test
+    public void testPowerOfTwoTwo() {
+        int[] powerTwo = new int[]{30, 31, 32, 33, 34};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(powerTwo) == 3);
+    }
+
+    @Test
+    public void testAllSamePowerOfTwo() {
+        int[] allPower = new int[]{8, 8, 8, 8, 8};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(allPower) == 1000003);
+    }
+
+    @Test
+    public void testPerfectSquareAndPair() {
+        int[] perfectAndPair = new int[]{9,9,11,13,14};
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(perfectAndPair) == 17);
     }
 
     @Test
