@@ -60,7 +60,7 @@ public class TestSlipperySlot {
                 for (int a = 0; a < 5; a++) {
                     testValues[a] = value + a;
                     if (testValues[a] == 42) {
-                        int randMin = new Random.nextInt(5);
+                        int randMin = new Random().nextInt(5);
                         testValues[a] -= randMin;
                     }
                 }
@@ -69,7 +69,7 @@ public class TestSlipperySlot {
                 for (int a = 0; a < 5; a++) {
                     testValues[a] = value - a;
                     if (testValues[a] == 42) {
-                        int randMin = new Random.nextInt(5);
+                        int randMin = new Random().nextInt(5);
                         testValues[a] -= randMin;
                     }
                 }
