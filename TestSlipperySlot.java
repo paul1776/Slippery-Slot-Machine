@@ -82,7 +82,7 @@ public class TestSlipperySlot {
     public void testPerfectSquareAndPair() {
         int[] perfectAndPair = new int[]{9,9,11,13,14};
         SlipperySlot test = new SlipperySlot();
-        assertTrue(test.payOff(perfectTwo) == 17);
+        assertTrue(test.payOff(perfectAndPair) == 17);
     }
 
     @Test
