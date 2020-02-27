@@ -98,12 +98,19 @@ public class TestSlipperySlot {
         assertTrue(test.payOff(fortyTwoOne) == 2);
     }
 
+    @Test
     void testFortyTwoAndPerfectSquareAndPowerOfTwo() {
         int[] fortyTwoOne = new int[]{1,4,16,42,49};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(fortyTwoOne) == 12);
     }
 
+    @Test
+    void testOnlyOnePairAndFortyTwo() {
+        int[] pairAndFortyTwo = new int[]{3, 5, 7, 42, 42}
+        SlipperySlot test = new SlipperySlot();
+        assertTrue(test.payOff(fortyTwoOne) == 12);
+    }
 
 
     void main() {
