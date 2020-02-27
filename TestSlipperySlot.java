@@ -107,14 +107,14 @@ public class TestSlipperySlot {
 
     @Test
     public void testOnlyOnePairAndFortyTwoOne() {
-        int[] pairAndFortyTwo = new int[]{3, 5, 7, 42, 42}
+        int[] pairAndFortyTwo = new int[]{3, 5, 7, 42, 42};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(fortyTwoOne) == 12);
     }
 
     @Test
     public void testOnlyOnePairAndFortyTwoTwo() {
-        int[] pairAndFortyTwo = new int[]{46, 41, 7, 7, 42}
+        int[] pairAndFortyTwo = new int[]{46, 41, 7, 7, 42};
         SlipperySlot test = new SlipperySlot();
         assertTrue(test.payOff(fortyTwoOne) == 12);
     }
