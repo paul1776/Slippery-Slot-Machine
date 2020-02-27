@@ -44,7 +44,7 @@ public class TestSlipperySlot {
 
             // Test with payOff class
             SlipperySlot test = new SlipperySlot();
-            assertTrue(test.payOff(testValues) > 1000000);
+            assertTrue(test.payOff(testValues) >= 1000000);
         }
     }
 
