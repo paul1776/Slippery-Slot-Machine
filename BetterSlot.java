@@ -1,3 +1,5 @@
+package BetterSlot;
+
 import java.lang.Math;
 import java.util.Random;
 import java.util.Arrays;
