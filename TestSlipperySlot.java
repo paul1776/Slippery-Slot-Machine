@@ -260,7 +260,7 @@ public class TestSlipperySlot {
     }
 
     /** Makes 10,000 calls to SlipperySlot functions pullTheLever() and payOff().
-     * Sets timeout to 42ms, so as to allow correct implementation to pass and fail incorrect ones.
+     * Sets timeout to 50ms, so as to allow correct implementation to pass and fail incorrect ones.
      * @version 1.0 */
     @Test (timeout = 50)
     public void testTimeout() {
