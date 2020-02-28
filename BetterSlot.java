@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class BetterSlot {
     /**
-     * This is a class to create the Lever pull functionality.
+     * This is a function to create the Lever pull functionality.
      * It generates 5 integer values in [0;50].
      * @version 1.0
      * @return int[] values
@@ -27,7 +27,7 @@ public class BetterSlot {
     }
 
     /**
-     * This is a class to generate the slot machine's payoff.
+     * This is a function to generate the slot machine's payoff.
      * It calculates and returns an integer, payout, from a given set of five integers in [0;50].
         * @param values an integer array of size 5 with values in [0;50].
         * @version 1.0
