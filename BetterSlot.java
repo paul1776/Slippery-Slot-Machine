@@ -1,3 +1,5 @@
+package SlipperySlot;
+
 import java.lang.Math;
 import java.util.Random;
 import java.util.Arrays;
