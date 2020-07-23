@@ -1,4 +1,4 @@
-# Programming Assignment 3: Slippery Slot Machines
+# Slippery Slot Machines
 ## COSC 150 - Advanced Programming
 
 - [Goals](#goals)
@@ -9,7 +9,7 @@
 
 ## Goals
 
-In order to complete this assignment, you will need to:
+In order to complete this assignment, I needed to:
 - Understand how to model decision-making behavior in UML
   - Create a UML activity diagram expressing the payout-deciding behavior used in this assignment.
 - Understand how to create a unit test suite for a Java class
@@ -32,7 +32,7 @@ Each implementation of a Slippery Slot Machine provides a public interface of tw
 
 #### The SlipperySlot rules
 
-Each implementation of a Slippery Slot Machine is supposed to function according to the following rules: 
+In this assginment, I implemented a Slippery Slot Machine that functions according to the following rules: 
 - A single play costs $2 and produces a set of five numbers taking values between 1 and 50 (inclusive) as uniformly-distributed, i.i.d. random variables.
 - Once the five number spin has been generated, an associated payoff is computed by applying the rules below.
   - Rules 1-5 are mutually-exclusive -- at most one of these rules may apply at a time, and each rule may apply exactly once per spin (choose the highest-paying rule which applies).
@@ -51,7 +51,7 @@ The payout rules are:
 
 #### The SlipperySlot API
 
-Each implementation of a SlipperySlot enacts the rules above through the following two public methods:
+My implementation of a SlipperySlot enacts the rules above through the following two public methods:
 - `int[] pullTheLever()`
   - This method generates a single spin of the slot machine. Its return value is an array of five integer values, each lying between 1 and 50 (inclusive) and chosen to be appropriately random.
 
@@ -60,7 +60,7 @@ Each implementation of a SlipperySlot enacts the rules above through the followi
 
 ### Requirements
 
-You will create the following files and add them to your repository:
+I had to create the following files and add them to my repository:
 - `ActivityDiagram.pdf`, a UML activity diagram which models the behavior of the `payOff` method described above.
   - Your diagram may assume that the five-number spin has been provided (as input to the function).
   - Your diagram should describe the logic used to detect each of the rules above.
@@ -77,48 +77,4 @@ This diagram will be *hand-graded* by me after the design document due date; the
   - Your `BetterSlot` may have additional (private) implementation as you see fit, so long as it fulfils the public API described above.
   - Your `BetterSlot` is not required to provide a `main` method, but may do so for your own testing purposes.
   - You are *strongly* encouraged to run your JUnit tests against your `BetterSlot` implementation; however, be sure that your final commit has the tests targeting a `SlipperySlot` instance.
-      
-
-## Provided files
-
-As a convenience for developing/validating your `TestSlipperySlot` class, we have provided a pre-compiled `SlipperySlot` implementation as a .jar file. This implementation is *incorrect*, so a well-written test suite will find some errors with it. (*Note: Travis will run your test suite against several different SlipperySlot implementations, each with different kinds of errors.*).
-
-Your test suite will be able to instantiate objects of type `SlipperySlot` by adding this .jar to your classpath. To do this for an Eclipse Project,
-1. Go to the menu "Project -> Properties"
-2. Select the "Java build path" option from the list on the left.
-3. Select the "Libraries" tab from the choices on the top of the resulting window.
-4. Click on the "Classpath" line in the pane below, then click the "Add External JARS..." button to the right.
-5. Locate the `SlipperySlot.jar` file and click "Open" to add this file to your classpath.
-
-Note that the `SlipperySlot.jar` does NOT need to be inside your Eclipse workspace for this addition to work, so long as it is not going to move while you work on the project.
-
-Additionally, the following files related to project logistics are present in your repository:
-- `README.md` which provides this specification.
-- `.gitignore` which specifies files git should NOT track.
-- `.travis.yml` which provides instructions to trigger Travis testing.
-- `travis` a directory containing the testing scripts.
-
-You should not modify *any* of these files while working on your project; doing so may break Travis such that a test build does not run, or gives false/misleading feedback about your code.
-
-## Grading rubric
-
-Your score for this assignment is determined according to the following rubric.
-
-Amazing Feat | Points Awarded | Tested by TravisCI?
----          | :---:          | ---:
-**Design document tests**
-Your repository contains a file named `ActivityDiagram.pdf`          | 10 | Yes
-Your activity diagram is legible, neatly formatted, and uses proper UML styling and syntax.                                                              | 20 | *No*
-**TestSlipperySlot tests**
-Your repository contains `TestSlipperySlot.java`.                    |  5 | Yes
-Your `TestSlipperySlot.java` compiles.                               | 10 | Yes
-An incorrect `SlipperySlot` fails at least one of your tests (x7).   | 70 | Yes
-A correct `SlipperySlot` passes all of your tests.                   | 10 | Yes
-Your `TestSlipperySlot.java` uses consistent style, reasonable method/variable names, and is documented clearly.                                    | 10 | *No*
-**BetterSlot tests**
-Your repository contains `BetterSlot.java`                           |  5 | Yes
-Your `BetterSlot.java` compiles.                                     | 10 | Yes
-Your `BetterSlot` correctly implements the SSM rules (x10).          | 50 | Yes
-Your `BetterSlot.java` uses consistent style, reasonable method/variable names, and is documented clearly.                                               | 10 | *No*
-**Total points**                                                    | 210 |
-*Total TravisCI points*                                           | *170* |  
+     
