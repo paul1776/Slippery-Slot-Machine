@@ -26,10 +26,6 @@ SSMC has already generated a specification (below) of the rules for their slot m
 
 ## Specification and requirements
 
-### Specification
-
-Each implementation of a Slippery Slot Machine provides a public interface of two methods, and follows a set of payoff rules (described below).
-
 #### The SlipperySlot rules
 
 In this assginment, I implemented a Slippery Slot Machine that functions according to the following rules: 
